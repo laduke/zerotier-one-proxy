@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "http-proxy": "^1.16.2"
+  },
+  "devDependencies": {
+    "express": "^4.16.2"
+  },
+  "name": "zerotier-one-proxy",
+  "version": "0.0.1",
+  "description": "node http proxy to zerotier one json api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laduke/zerotier-one-proxy.git"
+  },
+  "author": "travis laduke",
+  "license": "MIT"
+}
