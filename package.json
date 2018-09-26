@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "dotenv": "^5.0.0",
     "http-proxy": "^1.16.2"
   },
   "devDependencies": {

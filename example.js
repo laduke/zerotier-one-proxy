@@ -1,17 +1,17 @@
 var express = require('express')
+var Proxy = require('.')
 
-var proxy = require('./index')
-
+var token = process.env.ZT_TOKEN
 var app = express()
-app.use('/one', proxy)
+app.use('/one', Proxy({ token }))
 app.use('*', errorHandler)
 
-app.listen(9017, function () {
+app.listen(9018, function () {
   console.log(`http://localhost:${this.address().port}/one/status`)
   console.log(`http://localhost:${this.address().port}/one/network`)
   console.log(`http://localhost:${this.address().port}/one/peer`)
 })
 
 function errorHandler (err, req, res, next) {
-  res.send(err)
+  res.status(err.status || 500).send({ message: err.message })
 }
